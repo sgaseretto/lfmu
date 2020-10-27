@@ -1,8 +1,10 @@
-# LFMU: LightFM Utils
+# LFMU
 > Utils to extend LightFM functionalities
 
 
-This project adds some functionalities to already existing LightFM library
+## LightFM Utils
+
+This project adds some functionalities to the already existing LightFM library
 
 ## Install
 
