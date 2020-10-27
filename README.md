@@ -12,3 +12,14 @@ This project adds some functionalities to already existing LightFM library
 
 - [ ] Delete Users and Items from Dataset and Model
 - [ ] Reasign Features to Users and Items
+
+```
+1 + 1
+```
+
+
+
+
+    2
+
+
