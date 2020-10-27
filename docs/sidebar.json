@@ -1,6 +1,7 @@
 {
   "lfmu": {
     "Overview": "/",
-    "module name here": "core.html"
+    "module name here": "core.html",
+    "Synth Dataset Generator": "synth_dataset.html"
   }
 }

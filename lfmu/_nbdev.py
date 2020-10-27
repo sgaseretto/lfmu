@@ -2,9 +2,9 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"gen_values": "01_synth_dataset.ipynb"}
 
-modules = []
+modules = ["synth.py"]
 
 doc_url = "https://sgaseretto.github.io/lfmu/"
 
