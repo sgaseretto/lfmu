@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"gen_values": "01_synth_dataset.ipynb"}
+index = {"gen_values": "01_synth_dataset.ipynb",
+         "gen_added_n_deleted": "01_synth_dataset.ipynb"}
 
 modules = ["synth.py"]
 
