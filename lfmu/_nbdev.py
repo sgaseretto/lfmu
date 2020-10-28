@@ -4,7 +4,9 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"gen_values": "01_synth_dataset.ipynb",
          "gen_added_n_deleted": "01_synth_dataset.ipynb",
-         "exclude_element": "01_synth_dataset.ipynb"}
+         "exclude_element": "01_synth_dataset.ipynb",
+         "build_interactions": "01_synth_dataset.ipynb",
+         "build_features_from_df": "01_synth_dataset.ipynb"}
 
 modules = ["synth.py"]
 
