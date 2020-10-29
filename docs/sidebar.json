@@ -2,6 +2,7 @@
   "lfmu": {
     "Overview": "/",
     "module name here": "core.html",
-    "Synth Dataset Generator": "synth_dataset.html"
+    "Synth Dataset Generator": "synth_dataset.html",
+    "Tests to see how to re-map users and items": "test_mockdatasets.html"
   }
 }

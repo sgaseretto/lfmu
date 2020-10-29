@@ -4,6 +4,15 @@ __all__ = ['gen_values', 'gen_added_n_deleted', 'exclude_element', 'build_intera
            'build_datasets']
 
 # Cell
+import pandas as pd
+import numpy as np
+import random
+from lightfm import LightFM
+from lightfm.data import Dataset
+
+random.seed(42)
+
+# Cell
 def gen_values(n_values=10, prefix='u'):
     "Generates a list of values that will be used for generate the dataset"
     l = []
@@ -12,14 +21,13 @@ def gen_values(n_values=10, prefix='u'):
     return l
 
 # Cell
-def gen_added_n_deleted(l_values, max_added=3, max_deleted=3, r=None):
+def gen_added_n_deleted(l_values, max_added=3, max_deleted=3):
     '''
     Generates two lists of values, one list will contain the values that will be deleted from the dataset,
     and the second one will contain the values that will be added to the dataset.
     '''
     deleted = []
     added = []
-    # if r == None: r = random.random()
     for i in l_values:
         r = random.random()
         if len(deleted) < max_deleted and r < 0.8:
@@ -65,7 +73,7 @@ def build_features_from_df(feature_interactions_df, element_id_column, feature_c
     return tuples
 
 # Cell
-def build_datasets(n_users=10, n_items=10, print_added_n_deleted=False):
+def build_datasets(n_users=10, n_items=10, max_added=3, max_deleted=3, print_added_n_deleted=False):
     '''
     This function generates two **datasets** to simulate changes through time from one dataset.
     The first generated **dataset** is the state from the data in a time *t* and the second dataset
@@ -79,9 +87,9 @@ def build_datasets(n_users=10, n_items=10, print_added_n_deleted=False):
     all_user_features = gen_values(prefix='uf')
     all_item_features = gen_values(prefix='if')
 
-    users_added, users_deleted = gen_added_n_deleted(users)
+    users_added, users_deleted = gen_added_n_deleted(users, max_added=max_added, max_deleted=max_deleted)
     if print_added_n_deleted: print(users_added, users_deleted)
-    items_added, items_deleted = gen_added_n_deleted(items)
+    items_added, items_deleted = gen_added_n_deleted(items, max_added=max_added, max_deleted=max_deleted)
     if print_added_n_deleted: print(items_added, items_deleted)
     before['user_id'] = exclude_element(users, users_added)
     before['item_id'] = exclude_element(items, items_added)

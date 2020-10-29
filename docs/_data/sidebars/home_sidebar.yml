@@ -15,6 +15,9 @@ entries:
     - output: web,pdf
       title: Synth Dataset Generator
       url: synth_dataset.html
+    - output: web,pdf
+      title: Tests to see how to re-map users and items
+      url: test_mockdatasets.html
     output: web
     title: lfmu
   output: web
