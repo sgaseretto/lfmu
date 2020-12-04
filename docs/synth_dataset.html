@@ -61,7 +61,40 @@ nb_path: "notebooks/01_synth_dataset.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="gen_values" class="doc_header"><code>gen_values</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>gen_values</code>(<strong><code>n_values</code></strong>=<em><code>10</code></em>, <strong><code>prefix</code></strong>=<em><code>'u'</code></em>)</p>
+<h2 id="SynthDataset" class="doc_header"><code>class</code> <code>SynthDataset</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L17" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SynthDataset</code>()</p>
+</blockquote>
+<p>Instance of two states of a dataset, one at time <strong>T</strong> and the other at time <strong>T+1</strong>
+where some users and items could had been added, deleted, and also their feautes</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="gen_values" class="doc_header"><code>gen_values</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L33" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>gen_values</code>(<strong><code>n_values</code></strong>=<em><code>10</code></em>, <strong><code>prefix</code></strong>=<em><code>'u'</code></em>)</p>
 </blockquote>
 <p>Generates a list of values that will be used for generate the dataset</p>
 
@@ -126,7 +159,7 @@ nb_path: "notebooks/01_synth_dataset.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="gen_added_n_deleted" class="doc_header"><code>gen_added_n_deleted</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L24" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>gen_added_n_deleted</code>(<strong><code>l_values</code></strong>, <strong><code>max_added</code></strong>=<em><code>3</code></em>, <strong><code>max_deleted</code></strong>=<em><code>3</code></em>)</p>
+<h4 id="gen_added_n_deleted" class="doc_header"><code>gen_added_n_deleted</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L41" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>gen_added_n_deleted</code>(<strong><code>l_values</code></strong>, <strong><code>max_added</code></strong>=<em><code>3</code></em>, <strong><code>max_deleted</code></strong>=<em><code>3</code></em>)</p>
 </blockquote>
 <p>Generates two lists of values, one list will contain the values that will be deleted from the dataset,
 and the second one will contain the values that will be added to the dataset.</p>
@@ -192,7 +225,7 @@ and the second one will contain the values that will be added to the dataset.</p
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="exclude_element" class="doc_header"><code>exclude_element</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L41" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exclude_element</code>(<strong><code>l</code></strong>, <strong><code>values_to_exclude</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="exclude_element" class="doc_header"><code>exclude_element</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L58" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>exclude_element</code>(<strong><code>l</code></strong>, <strong><code>values_to_exclude</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Excludes the elements from <strong>values_to_exclude</strong> from <strong>l</strong></p>
 
@@ -224,7 +257,7 @@ and the second one will contain the values that will be added to the dataset.</p
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="build_interactions" class="doc_header"><code>build_interactions</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>build_interactions</code>(<strong><code>l1</code></strong>, <strong><code>l2</code></strong>, <strong><code>l1_col_name</code></strong>=<em><code>'user_id'</code></em>, <strong><code>l2_col_name</code></strong>=<em><code>'item_id'</code></em>, <strong><code>sparsity</code></strong>=<em><code>0.5</code></em>)</p>
+<h4 id="build_interactions" class="doc_header"><code>build_interactions</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L65" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>build_interactions</code>(<strong><code>l1</code></strong>, <strong><code>l2</code></strong>, <strong><code>l1_col_name</code></strong>=<em><code>'user_id'</code></em>, <strong><code>l2_col_name</code></strong>=<em><code>'item_id'</code></em>, <strong><code>sparsity</code></strong>=<em><code>0.5</code></em>)</p>
 </blockquote>
 <p>Builds interactions between l1 and l2.
 The sparsity determines how sparse this interactions will be.</p>
@@ -257,7 +290,7 @@ The sparsity determines how sparse this interactions will be.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="build_features_from_df" class="doc_header"><code>build_features_from_df</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L62" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>build_features_from_df</code>(<strong><code>feature_interactions_df</code></strong>, <strong><code>element_id_column</code></strong>, <strong><code>feature_column</code></strong>, <strong><code>tolist</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="build_features_from_df" class="doc_header"><code>build_features_from_df</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L79" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>build_features_from_df</code>(<strong><code>feature_interactions_df</code></strong>, <strong><code>element_id_column</code></strong>, <strong><code>feature_column</code></strong>, <strong><code>tolist</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>Builds tuples of elements and its features to build the dataset</p>
 
@@ -289,7 +322,7 @@ The sparsity determines how sparse this interactions will be.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="build_datasets" class="doc_header"><code>build_datasets</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L76" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>build_datasets</code>(<strong><code>n_users</code></strong>=<em><code>10</code></em>, <strong><code>n_items</code></strong>=<em><code>10</code></em>, <strong><code>max_added</code></strong>=<em><code>3</code></em>, <strong><code>max_deleted</code></strong>=<em><code>3</code></em>, <strong><code>print_added_n_deleted</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="SynthDataset.build_synth_dataset" class="doc_header"><code>SynthDataset.build_synth_dataset</code><a href="https://github.com/sgaseretto/lfmu/tree/master/lfmu/synth.py#L93" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>SynthDataset.build_synth_dataset</code>(<strong><code>n_users</code></strong>=<em><code>10</code></em>, <strong><code>n_items</code></strong>=<em><code>10</code></em>, <strong><code>max_added</code></strong>=<em><code>3</code></em>, <strong><code>max_deleted</code></strong>=<em><code>3</code></em>, <strong><code>print_added_n_deleted</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>This function generates two <strong>datasets</strong> to simulate changes through time from one dataset.
 The first generated <strong>dataset</strong> is the state from the data in a time <em>t</em> and the second dataset
@@ -313,9 +346,9 @@ and their metadata could be also updated (new metadata that expresses better the
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">before</span><span class="p">,</span> <span class="n">after</span> <span class="o">=</span> <span class="n">build_datasets</span><span class="p">(</span><span class="n">print_added_n_deleted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">before</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">after</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">before</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">],</span> <span class="n">after</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">SynthDataset</span><span class="p">()</span>
+<span class="n">x</span><span class="o">.</span><span class="n">build_synth_dataset</span><span class="p">(</span><span class="n">print_added_n_deleted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># x.before[&#39;user_id&#39;], x.after[&#39;user_id&#39;], x.before[&#39;item_id&#39;], x.after[&#39;item_id&#39;]</span>
 </pre></div>
 
     </div>
@@ -328,23 +361,14 @@ and their metadata could be also updated (new metadata that expresses better the
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;u1&#39;, &#39;u2&#39;, &#39;u3&#39;] [&#39;u0&#39;, &#39;u5&#39;, &#39;u6&#39;]
-[&#39;i1&#39;, &#39;i4&#39;, &#39;i5&#39;] [&#39;i0&#39;, &#39;i2&#39;, &#39;i3&#39;]
+<pre>added users: [&#39;u1&#39;, &#39;u2&#39;, &#39;u3&#39;]	 deleted users: [&#39;u0&#39;, &#39;u5&#39;, &#39;u6&#39;]
+added items: [&#39;i1&#39;, &#39;i4&#39;, &#39;i5&#39;]	 deleted items: [&#39;i0&#39;, &#39;i2&#39;, &#39;i3&#39;]
+users before:	[&#39;u0&#39;, &#39;u4&#39;, &#39;u5&#39;, &#39;u6&#39;, &#39;u7&#39;, &#39;u8&#39;, &#39;u9&#39;]
+users after:	[&#39;u1&#39;, &#39;u2&#39;, &#39;u3&#39;, &#39;u4&#39;, &#39;u7&#39;, &#39;u8&#39;, &#39;u9&#39;]
+items before:	[&#39;i0&#39;, &#39;i2&#39;, &#39;i3&#39;, &#39;i6&#39;, &#39;i7&#39;, &#39;i8&#39;, &#39;i9&#39;]
+items after:	[&#39;i1&#39;, &#39;i4&#39;, &#39;i5&#39;, &#39;i6&#39;, &#39;i7&#39;, &#39;i8&#39;, &#39;i9&#39;]
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>([&#39;u0&#39;, &#39;u4&#39;, &#39;u5&#39;, &#39;u6&#39;, &#39;u7&#39;, &#39;u8&#39;, &#39;u9&#39;],
- [&#39;u1&#39;, &#39;u2&#39;, &#39;u3&#39;, &#39;u4&#39;, &#39;u7&#39;, &#39;u8&#39;, &#39;u9&#39;],
- [&#39;i0&#39;, &#39;i2&#39;, &#39;i3&#39;, &#39;i6&#39;, &#39;i7&#39;, &#39;i8&#39;, &#39;i9&#39;],
- [&#39;i1&#39;, &#39;i4&#39;, &#39;i5&#39;, &#39;i6&#39;, &#39;i7&#39;, &#39;i8&#39;, &#39;i9&#39;])</pre>
-</div>
-
 </div>
 
 </div>
